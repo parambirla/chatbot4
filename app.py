@@ -25,7 +25,7 @@ def api():
     global conversation_history
 
     #personality = Agreeableness
-    message = request.json.get("message") + ' . (Respond to this assuming "Agreeableness" personality trait without revealing "Agreeableness" statement in response and give response for minimum 200 words) '
+    message = request.json.get("message") + ' . (Respond to this assuming "Agreeableness" personality trait without revealing "Agreeableness" statement in response) '
 
     conversation_history.append({"role": "user", "content": message})
     # Send the message to OpenAI's API and receive the response
